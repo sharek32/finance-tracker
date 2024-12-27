@@ -1,0 +1,249 @@
+/* General Reset and Body */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Salvador', sans-serif;
+    }
+
+    body {
+      background-color: #111;
+      color: #fff;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      background-color: #222;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    }
+
+    header .logo {
+      font-size: 2.5rem;
+      color: #ff0;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    header nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    header nav ul li {
+      margin-left: 2rem;
+    }
+
+    header nav ul li a {
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    header nav ul li a:hover {
+      color: #ff0;
+    }
+
+    header nav ul li a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background-color: #ff0;
+      left: 0;
+      bottom: -5px;
+      transition: width 0.3s ease;
+    }
+
+    header nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-image: url('');
+      background-size: cover;
+      background-position: center;
+      padding: 8rem 2rem;
+      color: white;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      background-color: #ff0;
+      color: #111;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #ffb900;
+    }
+
+    /* Dashboard Section */
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      padding: 4rem 2rem;
+      background-color: #1c1c1c;
+    }
+
+    .card {
+      background: #444;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+      text-align: center;
+      transition: transform 0.3s ease;
+      height: 200px;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card h2 {
+      color: #ff0;
+      margin-bottom: 1rem;
+    }
+
+    .card p {
+      font-size: 1.5rem;
+      color: #fff;
+    }
+
+    /* Add Transaction Section */
+    #add-transaction {
+      background-color: #333;
+      padding: 3rem 2rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+    }
+
+    #add-transaction h2 {
+      margin-bottom: 2rem;
+      text-align: center;
+      font-size: 2.5rem;
+      color: #ff0;
+    }
+
+    #transaction-form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    #transaction-form label {
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    #transaction-form input, 
+    #transaction-form select {
+      padding: 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #444;
+      color: #fff;
+      font-size: 1.1rem;
+      width: 100%;
+    }
+
+    #transaction-form button {
+      background-color: #28a745;
+      color: #fff;
+      padding: 1.2rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #transaction-form button:hover {
+      background-color: #218838;
+    }
+
+    /* Weekly Analysis Chart */
+    .chart-boundary {
+      background-color: #282828;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .column-chart {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      height: 400px;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 40px;
+      transition: transform 0.3s ease;
+    }
+
+    .column:hover {
+      transform: translateY(-10px);
+    }
+
+    .column .bar {
+      width: 100%;
+      height: 0;
+      transition: height 0.5s ease-out;
+    }
+
+    .column .value {
+      color: #fff;
+      margin-top: 0.5rem;
+      font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: #fff;
+      margin-top: 20px;
+    }
+
+    footer a {
+      color: #ff0;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
